@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Test Extension Options</title>
+    <link rel="stylesheet" href="../utils/bootstrap.css" />
+    <style>
+      li {
+        list-style: none;
+      }
+      #app {
+        margin: 10px auto;
+      }
+
+      .import-btn {
+        width: 120px;
+      }
+      #bookmarks-list {
+        max-height: 500px;
+        overflow: auto;
+      }
+      .search-wrap {
+        margin: 10px 0;
+      }
+      #import-preview {
+        max-height: 50vh;
+        overflow: auto;
+      }
+      .share-container {
+        max-height: calc(100vh - 100px);
+        overflow: auto;
+      }
+      .accordion-button {
+        width: 100px;
+      }
+      .accordion-button:not(.collapsed) {
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" class="container">
+      <div class="row">
+        <div id="bookmarks" class="col">
+          <div class="breadcrumb">书签列表</div>
+          <div id="bookmarks-list"></div>
+          <div class="search-wrap container">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="import-input"
+                  placeholder="请输入分享的id"
+                />
+              </div>
+              <div class="col-3">
+                <button id="import-btn" class="import-btn btn btn-primary">
+                  导入书签
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="breadcrumb">导入书签预览</div>
+          <div id="import-preview"></div>
+        </div>
+        <div class="col">
+          <div>已分享列表</div>
+          <div class="share-container" id="share-container"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./options.js" type="module"></script>
+  </body>
+</html>

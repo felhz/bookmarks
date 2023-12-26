@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "bookmarks",
+  "description": "Base Level Extension",
+  "version": "1.0",
+  "action": {
+    "default_popup": "./popup/popup.html",
+    "default_icon": "hello_extensions.png"
+  },
+  "options_page": "./options/options.html",
+  "permissions": ["storage", "bookmarks", "activeTab", "scripting", "tabs"],
+
+  "host_permissions": ["http://10.254.75.166/", "http://*/*"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["./content/content-styles.css"],
+      "js": ["./content/content-script.js"]
+    }
+  ]
+}
